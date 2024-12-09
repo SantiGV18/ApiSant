@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./animeSearch.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200&display=swap"
+    rel="stylesheet"
+  />
+  <title>API - El Santi</title>
+</head>
+<body>
+  <!-- Header -->
+  <div class="header">
+    <header class="text-center">
+      <h1>API El Santi</h1>
+      <h2>Consumir APIs</h2>
+      <div class="d-flex justify-content-center">
+        <button id="showPokemon" class="btn btn-primary me-2">Pokémon</button>
+        <a href="./animeSearch.html" id="showAnime" class="btn btn-secondary">Anime</a>
+      </div>
+    </header>
+  </div>
+
+  <!-- Pokémon Section -->
+  <div id="pokemonContainer" class="container">
+    <h2 class="text-center mt-4">Pokémon</h2>
+    <div id="pagination" class="d-flex justify-content-center"></div>
+    <div id="dataAlbum"  class="dataAlbum row row-cols-1 row-cols-md-4 g-4 justify-content-center"></div>
+  </div>
+
+  <!-- Anime Section -->
+  <div id="animeContainer" class="container">
+    <h2 class="text-center mt-5">Buscar Anime</h2>
+    <div class="input-group mb-4">
+      <input
+        type="text"
+        id="animeSearchInput"
+        class="form-control"
+        placeholder="Escribe el nombre de un anime"
+      />
+      <button id="searchButton" class="btn btn-primary">Buscar</button>
+    </div>
+    <div id="animeResults" class="row row-cols-1 row-cols-md-5 g-4"></div>
+  </div>
+
+  <script src="./js/pokeAPI.js"></script>
+  <script src="./js/animeSearch.js"></script>
+</body>
+</html>
